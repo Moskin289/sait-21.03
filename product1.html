@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой интернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+          <img src="https://i.pinimg.com/736x/e6/99/fb/e699fb7cd6ce72d00445fac66fdfc997.jpg" alt="Логотип" class="logo">
+          <span class="header-text"><h1>Фигурки из Dota2<h2>
+            <br>Качественные фигурки для качественных людей
+          </span>
+        </div>
+      </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li> <!-- Ссылка на главную страницу -->
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="products" class="section">
+            <div class="container">
+                <h2>Наши товары</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <a href="product1.html">
+                            <img src="https://cs6.pikabu.ru/post_img/big/2015/03/18/6/1426666202_1788332898.jpg" alt="Sand King" loading="lazy">
+                            <h3>Sand King</h3>
+                            <p class="price">1999 ₽</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="1">В корзину</button>
+                    </div>
+                    <div class="product">
+                        <a href="product2.html">
+                            <img src="https://cs1.livemaster.ru/storage/02/d6/921c2bc10dca04b56b4975e6de0j--kukly-i-igrushki-figurka-iz-polimernoj-gliny-geroya-dota-2-pu.jpg" alt="Товар 2" loading="lazy">
+                            <h3>Pudge</h3>
+                            <p class="price">2499 ₽</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="2">В корзину</button>
+                    </div>
+                    <div class="product">
+                        <a href="product3.html">
+                            <img src="https://sun9-19.userapi.com/impf/c628016/v628016135/206d4/sBAOyOaTYC8.jpg?size=604x327&quality=96&sign=7a39c319ee50316a85ac8a5e96c729e3&type=album" alt="Товар 3" loading="lazy">
+                            <h3>Sven</h3>
+                            <p class="price">2999 ₽</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="3">В корзину</button>
+                    </div>
+                    <!-- Добавьте больше товаров здесь -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Лучший интернет магазин в мире</p>
+    </footer>
+
+    <script>
+        //Простая реализация добавления товара в корзину (localStorage)
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.dataset.productId;
+                    //Простая логика: добавляем ID товара в localStorage
+                    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+                    cart.push(productId);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert('Товар добавлен в корзину!'); //Простое уведомление
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
