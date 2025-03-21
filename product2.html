@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар 1 - [Название Вашего Магазина]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+          <img src="https://i.pinimg.com/736x/e6/99/fb/e699fb7cd6ce72d00445fac66fdfc997.jpg" alt="Логотип" class="logo">
+          <span class="header-text"><h1>Фигурки из Dota2<h2>
+            <br>Качественные фигурки для качественных людей
+          </span>
+        </div>
+      </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="product-details" class="section">
+            <div class="container">
+                <div class="product-details-grid">
+                    <img src="https://cs1.livemaster.ru/storage/02/d6/921c2bc10dca04b56b4975e6de0j--kukly-i-igrushki-figurka-iz-polimernoj-gliny-geroya-dota-2-pu.jpg" alt="Товар 1" class="product-image">
+                    <div class="product-info">
+                        <h2>Pudge</h2>
+                        <p class="price">2499 ₽</p>
+                        <p>Pudge
+                            Притягивает врагов своим крюком
+                            На полях Вечной бойни, далеко на юге от Квойджа, тучная фигура упорно трудится под покровом ночи — расчленяет и потрошит павших, сгружая в кучи их конечности и потроха,
+                             — чтобы к рассвету поле боя было чисто. В этом проклятом мире ничто не разлагается само по себе — мертвецам не суждено вернуться обратно в землю, и не важно, насколько
+                              глубока могила. Окружённый стаями птиц-падальщиков, каждая из которых ждёт своего кусочка мёртвой плоти, мясник упражняется с лезвиями, и с каждым движением они
+                               становятся лишь острее. Вжик-вжик-тук. Плоть отсекается от костей, связки и сухожилия разрываются как мокрая бумага. И хоть мясницкое ремесло всегда было по вкусу
+                                тучному здоровяку, с годами у него проснулся интерес ещё и к тому, что остаётся после его работы. Сначала кусочек мускула там, потом глоточек крови здесь...
+                             Вскоре он впивался в самые крепкие тела подобно грызущей кость собаке. Даже те, кто не питают страха перед жнецом Смерти, предпочитают не связываться с мясником.</p>
+                        <button class="add-to-cart" data-product-id="1">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Лучший интернет магазин в мире</p>
+        </div>
+    </footer>
+
+    <script>
+         //Простая реализация добавления товара в корзину (localStorage)
+        document.addEventListener('DOMContentLoaded', function() {
+                const addToCartButton = document.querySelector('.add-to-cart');
+
+            addToCartButton.addEventListener('click', function() {
+
+                    const productId = this.dataset.productId;
+                    //Простая логика: добавляем ID товара в localStorage
+                    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+                    cart.push(productId);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert('Товар добавлен в корзину!'); //Простое уведомление
+                });
+
+        });
+    </script>
+
+</body>
+</html>
