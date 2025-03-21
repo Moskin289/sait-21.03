@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    background: #222;
+    background-image: url("https://i.pinimg.com/736x/78/fe/bd/78febd23883a700f15d4013aa01e973c.jpg");
     color: #fff;
     padding-top: 50px;
     min-height: 120px;
@@ -61,7 +61,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #e00000; /* Золотистый цвет */
+    color: #3fe000; /* Золотистый цвет */
 }
 
 .section {
@@ -103,12 +103,12 @@ nav a:hover {
 
 .price {
     font-size: 1.1em;
-    color: #e00000;
+    color: #c08c00;
     font-weight: bold;
 }
 
 .add-to-cart {
-    background-color: #e00000;
+    background-color: #c08c00;
     color: #fff;
     padding: 8px 16px;
     border: none;
@@ -117,11 +117,11 @@ nav a:hover {
     font-size: 1em;
 }
 header {
-    /* Стили для шапки (например, фон, отступы) */
+
     display: flex;
-    align-items: center; /* Вертикальное выравнивание */
-    justify-content: flex-start; /* Выравнивание по левому краю */
-    padding: 10px; /* Отступы */
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 10px; 
   }
   
   .header-content {
@@ -131,9 +131,9 @@ header {
   
   
   .logo {
-    width: 200px; /* Ширина логотипа */
-    height: 200px; /* Высота логотипа */
-    margin-right: 450px; /* Отступ справа от логотипа */
+    width: 200px; 
+    height: 200px; 
+    margin-right: 450px; 
   }
   
 
@@ -142,12 +142,12 @@ header {
     background-color: #c08c00;
 }
 
-/* Стили для страницы товара (product.html) */
+
 .product-details-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Две колонки */
+    grid-template-columns: 1fr 1fr; 
     grid-gap: 20px;
-    align-items: start; /* Выравнивание по верхнему краю */
+    align-items: start; 
 }
 
 .product-image {
@@ -177,7 +177,7 @@ header {
     font-weight: bold;
 }
 
-/* Стили для формы контактов и оформления заказа */
+
 form {
     width: 70%;
     margin: auto;
@@ -219,7 +219,7 @@ textarea {
     background-color: #c08c00;
 }
 
-/* Адаптивность */
+
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -235,7 +235,7 @@ textarea {
     }
 
     .product-grid {
-        grid-template-columns: 1fr; /* Один столбец на маленьких экранах */
+        grid-template-columns: 1fr; 
     }
 
     .product-details-grid {
@@ -247,13 +247,13 @@ textarea {
     }
 }
 #wrapper {
-    width: 60%; /* Ширина контейнера (можно настроить) */
-    margin: 20px auto; /* Центрирование контейнера */
-    border: 2px solid #333; /* Ширина, стиль и цвет рамки */
-    border-radius: 20px; /* Радиус скругления углов */
-    overflow: hidden; /* Обрезаем все, что выходит за рамки */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавляем тень для глубины */
-    background-color: #217cb138; /* Задаём фон для контейнера, чтобы видеть рамку */
+    width: 60%; 
+    margin: 20px auto; 
+    border: 2px solid #333; 
+    border-radius: 20px; 
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #217cb138; 
   }
   header, nav, main, footer {
     padding: 20px;
